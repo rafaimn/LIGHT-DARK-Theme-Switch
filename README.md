@@ -9,11 +9,7 @@ This is a simple web application that allows you to switch between a light and a
 - Clouds animation in the background, using CSS animations
 - Toggle switch to change between themes
 
-## Usage
 
-To use this application, simply open the index.html file in a web browser.
-
-Click the toggle button in the top right corner to switch between themes.
 
 ## About the clouds animation
 
@@ -27,7 +23,13 @@ The clouds animation is achieved with a series of cloud images that are position
 The `calc(3s * var(--i))` expression in the animation property is used to delay the start of the animation for each cloud, so that they don't all start at the same time.
 
 ## Preview
+<p align="center">
+  <img src="https://github.com/rafaimn/LIGHT-DARK-Theme-Switch/blob/main/preview/preview.gif" alt="Preview do projeto" />
+</p>
 
+<p align="center">
+  <a href="https://rafaimn.github.io/LIGHT-DARK-Theme-Switch//">Check it out!</a>
+</p>
 
 <hr>
 
