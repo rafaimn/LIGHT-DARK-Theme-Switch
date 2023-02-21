@@ -1,0 +1,66 @@
+/* Mobile-first responsive styles */
+section.main .title {
+    font-size: 3rem;
+    letter-spacing: -2px;
+    top: -9px;
+  }
+  
+  @media (min-width: 576px) {
+    section.main .title {
+      font-size: 5rem;
+      letter-spacing: -3px;
+      top: -15px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    section.main .title {
+      font-size: 7rem;
+      letter-spacing: -4px;
+      top: -21px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    section.main .title {
+      font-size: 9rem;
+      letter-spacing: -5px;
+      top: -27px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    section.main .title {
+      font-size: 12rem;
+      letter-spacing: -6px;
+      top: -36px;
+    }
+  }
+  
+  .switch-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 28px;
+  
+  }
+  
+  .switch-container::after {
+    left: -12px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #877979;
+    border-bottom: 8px solid transparent;
+  }
+  
+  .switch-label {
+    border-radius: 28px;
+  }
+  
+  .switch-label:after {
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    left: 4px;
+  }
+  
