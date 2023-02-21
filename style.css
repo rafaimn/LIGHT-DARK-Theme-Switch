@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+section.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.main.light {
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+}
+
+section.main.dark {
+  background: #50021c;
+  background: -webkit-linear-gradient(to right, #ffffff, #f11a61, #50021c);
+  background: linear-gradient(to right, #ffffff, #f11a61, #50021c);
+}
+
+section.main:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+}
+
+section.main.light::after {
+  background: transparent;
+  background: -webkit-linear-gradient(to top, #2980b9, transparent);
+  background: linear-gradient(to top, #2980b9, transparent);
+}
+
+section.main.dark::after {
+  background: transparent;
+  background: -webkit-linear-gradient(to top, #50021c, transparent);
+  background: linear-gradient(to top, #50021c, transparent);
+}
+
+
+section.main .title {
+  font-size: 12rem;
+  letter-spacing: -6px;
+  position: relative;
+  top: -36px;
+}
+
+section.main.light .title {
+  color: #ffffff;
+  text-transform: none;
+}
+
+section.main.dark .title {
+  color: #000000;
+  text-transform: uppercase;
+}
+
+section.main .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+section.main .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: clouds calc(3s * var(--i)) linear infinite;
+}
+
+
+.switch-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 34px;
+
+}
+
+.switch-container input[type="checkbox"] {
+  display: none;
+}
+
+.switch-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-right: 10px solid #877979;
+  border-bottom: 8px solid transparent;
+  transform: translateY(35%);
+  cursor: none;
+  rotate: 180deg;
+}
+
+
+.switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.switch-label {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  cursor: pointer;
+
+}
+
+.switch-label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.switch-container input[type="checkbox"]:checked~.switch-label {
+  background-color: #6dd5fa;
+}
+
+.switch-container input[type="checkbox"]:checked~.switch-label:after {
+  transform: translateX(24px);
+}
+
+
+
+
+@keyframes clouds {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(4);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
