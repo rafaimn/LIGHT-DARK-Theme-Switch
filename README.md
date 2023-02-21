@@ -4,7 +4,7 @@ This is a simple web application that allows you to switch between a light and a
 
 ## Features
 
-- Two different themes: Heaven and Hell
+- Two different themes: Light and Dark
 - Smooth transition between themes, with CSS gradients
 - Clouds animation in the background, using CSS animations
 - Toggle switch to change between themes
@@ -40,7 +40,7 @@ Este é um aplicativo web simples que permite alternar entre um tema claro e um 
 
 ## Funcionalidades
 
-- Dois temas diferentes: Céu e Inferno
+- Dois temas diferentes: Light e Dark
 - Transição suave entre temas, com gradientes CSS
 - Animação de nuvens em segundo plano, usando animações CSS
 - Botão de alternância para mudar entre temas
